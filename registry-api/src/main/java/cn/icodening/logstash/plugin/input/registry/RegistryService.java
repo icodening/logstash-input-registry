@@ -2,15 +2,15 @@ package cn.icodening.logstash.plugin.input.registry;
 
 import java.util.List;
 
-public interface Registry {
+public interface RegistryService {
 
     List<String> getServices();
 
     List<ServiceInstance> getInstances(String serviceId);
 
-    void subscribe(String service, NamingEventListener eventListener);
+    void subscribe(String service, RegistryEventListener eventListener);
 
-    void unsubscribe(String serviceName, NamingEventListener listener);
+    void unsubscribe(String serviceName, RegistryEventListener listener);
 
     List<String> getSubscribed();
 }

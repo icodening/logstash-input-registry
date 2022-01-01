@@ -1,6 +1,5 @@
 package cn.icodening.logstash.plugin.input.registry;
 
-import java.net.URI;
 import java.util.Map;
 
 public interface ServiceInstance {
@@ -14,6 +13,10 @@ public interface ServiceInstance {
     String getHost();
 
     int getPort();
+
+    default String getHostPort() {
+        return getHost() + ":" + getPort();
+    }
 
     Map<String, String> getMetadata();
 }

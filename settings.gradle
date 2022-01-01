@@ -1,3 +1,5 @@
 rootProject.name = 'logstash-input-registry'
 include 'registry-api'
+include 'registry-nacos'
+include 'registry'
 

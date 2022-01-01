@@ -3,11 +3,11 @@ package cn.icodening.logstash.plugin.input.registry;
 import java.util.EventObject;
 import java.util.List;
 
-public class NamingEvent extends EventObject {
+public class RegistryEvent extends EventObject {
 
     private final EventType eventType;
 
-    public NamingEvent(List<ServiceInstance> source, EventType eventType) {
+    public RegistryEvent(List<ServiceInstance> source, EventType eventType) {
         super(source);
         this.eventType = eventType;
     }
