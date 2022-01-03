@@ -25,6 +25,11 @@ public class NacosRegistryService implements RegistryService {
     }
 
     @Override
+    public String name() {
+        return "nacos";
+    }
+
+    @Override
     public List<String> getServices() {
         try {
             return namingService.getServicesOfServer(1, Integer.MAX_VALUE).getData();

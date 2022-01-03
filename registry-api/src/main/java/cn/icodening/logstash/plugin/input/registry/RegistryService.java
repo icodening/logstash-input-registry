@@ -4,6 +4,8 @@ import java.util.List;
 
 public interface RegistryService {
 
+    String name();
+
     List<String> getServices();
 
     List<ServiceInstance> getInstances(String serviceId);
